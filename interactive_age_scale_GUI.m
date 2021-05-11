@@ -323,31 +323,31 @@ guidata(hObject, handles); % stores filename into the handles catergory
 
             axes(axes1);
             	hold on
-                axes1a = plot(x(locate_prior_ties,:),[-inf inf],'-r');
+                axes1a = plot(x(locate_prior_ties,:),[-5000 5000],'-r');
                 axes1b = plot(x(locate_prior_ties,1), y1(locate_prior_ties,1),'or');
                 axes1c = text(x(locate_prior_ties,1) + 0.03, y1(locate_prior_ties,1),num2str(tieFile(locate_prior_ties)),'color','red','Fontsize',11);
                 hold off
             axes(axes2);
             	hold on
-                axes2a = plot(x(locate_prior_ties,:),[-inf inf],'-r');
+                axes2a = plot(x(locate_prior_ties,:),[-5000 5000],'-r');
                 axes2b = plot(x(locate_prior_ties,1), y2(locate_prior_ties,1),'or');
                 axes2c = text(x(locate_prior_ties,1) + 0.03, y2(locate_prior_ties,1),num2str(tieFile(locate_prior_ties)),'color','red','Fontsize',11);
                 hold off
             axes(axes3);
             	hold on
-                axes3a = plot(x(locate_prior_ties,:),[-inf inf],'-r');
+                axes3a = plot(x(locate_prior_ties,:),[-5000 5000],'-r');
                 axes3b = plot(x(locate_prior_ties,1), y3(locate_prior_ties,1),'or');
                 axes3c = text(x(locate_prior_ties,1) + 0.03, y3(locate_prior_ties,1),num2str(tieFile(locate_prior_ties)),'color','red','Fontsize',11);
                 hold off
             axes(axes4);
             	hold on
-                axes4a = plot(x(locate_prior_ties,:),[-inf inf],'-r');
+                axes4a = plot(x(locate_prior_ties,:),[-5000 5000],'-r');
                 axes4b = plot(x(locate_prior_ties,1), y4(locate_prior_ties,1),'or');
                 axes4c = text(x(locate_prior_ties,1) + 0.03, y4(locate_prior_ties,1),num2str(tieFile(locate_prior_ties)),'color','red','Fontsize',11);
                 hold off
             axes(axes5);
                 hold on
-                axes5a = plot(x(locate_prior_ties,:),[-inf inf],'-r');
+                axes5a = plot(x(locate_prior_ties,:),[-5000 5000],'-r');
                 axes5b = plot(x(locate_prior_ties,1), y5(locate_prior_ties,1),'or');
                 axes5c = text(x(locate_prior_ties,1) + 0.03, y5(locate_prior_ties,1),num2str(tieFile(locate_prior_ties)),'color','red','Fontsize',11);
             hold off
@@ -381,23 +381,23 @@ elseif exist == 1
             axes(handles.axes1);
                 hold on; plot(handles.x_closest, handles.y1(handles.index), 'or'); 
                 text(handles.x_closest+.03, handles.y1(handles.index),handles.input_year,'color','red','Fontsize',11); 
-                line([handles.x_closest handles.x_closest], [-inf inf], 'Color', [1 0 0], 'LineStyle','-'); hold off
+                line([handles.x_closest handles.x_closest], [-5000 5000], 'Color', [1 0 0], 'LineStyle','-'); hold off
             axes(handles.axes2);
                 hold on; plot(handles.x_closest, handles.y2(handles.index), 'or'); 
                 text(handles.x_closest+.03, handles.y2(handles.index),handles.input_year,'color','red','Fontsize',11); 
-                line([handles.x_closest handles.x_closest], [-inf inf], 'Color', [1 0 0], 'LineStyle','-'); hold off
+                plot([handles.x_closest handles.x_closest], [-5000 5000], 'Color', [1 0 0], 'LineStyle','-'); hold off
             axes(handles.axes3)
                 hold on; plot(handles.x_closest, handles.y3(handles.index), 'or'); 
                 text(handles.x_closest+.03, handles.y3(handles.index),handles.input_year,'color','red','Fontsize',11); 
-                line([handles.x_closest handles.x_closest], [-inf inf], 'Color', [1 0 0], 'LineStyle','-');hold off
+                line([handles.x_closest handles.x_closest], [-5000 5000], 'Color', [1 0 0], 'LineStyle','-');hold off
             axes(handles.axes4)
                 hold on; plot(handles.x_closest, handles.y4(handles.index), 'or'); 
                 text(handles.x_closest+.03, handles.y4(handles.index),handles.input_year,'color','red','Fontsize',11); 
-                line([handles.x_closest handles.x_closest], [-inf inf], 'Color', [1 0 0], 'LineStyle','-');hold off
+                line([handles.x_closest handles.x_closest], [-5000 5000], 'Color', [1 0 0], 'LineStyle','-');hold off
             axes(handles.axes5)
                 hold on; plot(handles.x_closest, handles.y5(handles.index), 'or'); 
                 text(handles.x_closest+.03, handles.y5(handles.index),handles.input_year,'color','red','Fontsize',11); 
-                line([handles.x_closest handles.x_closest], [-inf inf], 'Color', [1 0 0], 'LineStyle','-');hold off
+                line([handles.x_closest handles.x_closest], [-5000 5000], 'Color', [1 0 0], 'LineStyle','-');hold off
 
                 %            handles.x_closest(floor(input_year)) = x_closest(floor(input_year)); % save as decimal
 
@@ -740,31 +740,31 @@ function pushbutton_plot_absolute_ties_Callback(hObject, eventdata, handles)
                         
                         axes(handles.axes1);
                         	hold on; 
-                            plot(ties, repmat([-inf inf],[size(ties,1),1]), '--b'); 
+                            plot(ties, repmat([-5000 5000],[size(ties,1),1]), '--b'); 
                             plot(ties, closest_y1,'ob');
                             text(ties(:,1)+.03, closest_y1, num2str(age),'color','blue','Fontsize',11);
                             hold off;
                         axes(handles.axes2);
                             hold on; 
-                            plot(ties, repmat([-inf inf],[size(ties,1),1]), '--b');
+                            plot(ties, repmat([-5000 5000],[size(ties,1),1]), '--b');
                             plot(ties, closest_y2,'ob');
                             text(ties(:,1)+.03, closest_y2, num2str(age),'color','blue','Fontsize',11);
                             hold off;
                         axes(handles.axes3);
                             hold on; 
-                            plot(ties, repmat([-inf inf],[size(ties,1),1]), '--b'); % [-inf inf]
+                            plot(ties, repmat([-5000 5000],[size(ties,1),1]), '--b'); % [-5000 5000]
                             plot(ties, closest_y3,'ob');
                             text(ties(:,1)+.03, closest_y3, num2str(age),'color','blue','Fontsize',11);
                             hold off;
                         axes(handles.axes4);
                             hold on; 
-                            plot(ties, repmat([-inf inf],[size(ties,1),1]), '--b'); 
+                            plot(ties, repmat([-5000 5000],[size(ties,1),1]), '--b'); 
                             plot(ties, closest_y4,'ob');
                             text(ties(:,1)+.03, closest_y4, num2str(age),'color','blue','Fontsize',11);
                             hold off;
                         axes(handles.axes5);
                             hold on; 
-                            plot(ties, repmat([-inf inf],[size(ties,1),1]), '--b'); 
+                            plot(ties, repmat([-5000 5000],[size(ties,1),1]), '--b'); 
                             plot(ties, closest_y5,'ob');
                             text(ties(:,1)+.03, closest_y5, num2str(age),'color','blue','Fontsize',11);
                             hold off;
@@ -1611,31 +1611,31 @@ end
 
         axes(axes1);
         	hold on
-            axes1a = plot(x(locate_prior_ties,:),[-inf inf],'-g');
+            axes1a = plot(x(locate_prior_ties,:),[-5000 5000],'-g');
             axes1b = plot(x(locate_prior_ties,1), y1(locate_prior_ties,1),'og');
             axes1c = text(x(locate_prior_ties,1) + 0.03, y1(locate_prior_ties,1),num2str(tieFile(locate_prior_ties)),'color','green','Fontsize',11);% ,'FontWeight','bold');
             hold off
         axes(axes2);
             hold on
-            axes2a = plot(x(locate_prior_ties,:),[-inf inf],'-g');
+            axes2a = plot(x(locate_prior_ties,:),[-5000 5000],'-g');
             axes2b = plot(x(locate_prior_ties,1), y2(locate_prior_ties,1),'og');
             axes2c = text(x(locate_prior_ties,1) + 0.03, y2(locate_prior_ties,1),num2str(tieFile(locate_prior_ties)),'color','green','Fontsize',11);%,'FontWeight','bold');
             hold off
         axes(axes3);
             hold on
-            axes3a = plot(x(locate_prior_ties,:),[-inf inf],'-g');
+            axes3a = plot(x(locate_prior_ties,:),[-5000 5000],'-g');
             axes3b = plot(x(locate_prior_ties,1), y3(locate_prior_ties,1),'og');
             axes3c = text(x(locate_prior_ties,1) + 0.03, y3(locate_prior_ties,1),num2str(tieFile(locate_prior_ties)),'color','green','Fontsize',11);%,'FontWeight','bold');
             hold off
         axes(axes4);
             hold on
-            axes4a = plot(x(locate_prior_ties,:),[-inf inf],'-g');
+            axes4a = plot(x(locate_prior_ties,:),[-5000 5000],'-g');
             axes4b = plot(x(locate_prior_ties,1), y4(locate_prior_ties,1),'og');
             axes4c = text(x(locate_prior_ties,1) + 0.03, y4(locate_prior_ties,1),num2str(tieFile(locate_prior_ties)),'color','green','Fontsize',11);%,'FontWeight','bold');
             hold off
         axes(axes5);
             hold on
-            axes5a = plot(x(locate_prior_ties,:),[-inf inf],'-g');
+            axes5a = plot(x(locate_prior_ties,:),[-5000 5000],'-g');
             axes5b = plot(x(locate_prior_ties,1), y5(locate_prior_ties,1),'og');
             axes5c = text(x(locate_prior_ties,1) + 0.03, y5(locate_prior_ties,1),num2str(tieFile(locate_prior_ties)),'color','green','Fontsize',11);%,'FontWeight','bold');
             hold off            
